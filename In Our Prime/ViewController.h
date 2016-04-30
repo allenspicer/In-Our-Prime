@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PrimeBrain.h"
 
 @interface ViewController : UIViewController
 

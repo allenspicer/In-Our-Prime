@@ -10,18 +10,38 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *button;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
+
 @end
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    
+    PrimeBrainClass *primeBrainInstance = [[PrimeBrainClass alloc]init];
+    
+    // assign delegate
+    
+    primeBrainInstance.delegate = self;
+    [primeBrainInstance primeTestDelegate];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)didReceiveMemoryWarning
+{[super didReceiveMemoryWarning];}
+
+-(void)primeTest:(PrimeBrainClass *)primeBrain
+{
+    NSLog(@"Hello!");
+    
+    
 }
 
 @end

@@ -13,6 +13,7 @@
 		9F806A251CD28CBB004966B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F806A231CD28CBB004966B7 /* Main.storyboard */; };
 		9F806A271CD28CBB004966B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F806A261CD28CBB004966B7 /* Assets.xcassets */; };
 		9F806A2A1CD28CBB004966B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F806A281CD28CBB004966B7 /* LaunchScreen.storyboard */; };
+		9FC2A4D91CD4F82200F656C5 /* PrimeBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2A4D81CD4F82200F656C5 /* PrimeBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		9F806A261CD28CBB004966B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F806A291CD28CBB004966B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F806A2B1CD28CBB004966B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC2A4D71CD4F82200F656C5 /* PrimeBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeBrain.h; sourceTree = "<group>"; };
+		9FC2A4D81CD4F82200F656C5 /* PrimeBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				9F806A1D1CD28CBB004966B7 /* AppDelegate.h */,
 				9F806A1E1CD28CBB004966B7 /* AppDelegate.m */,
+				9FC2A4D71CD4F82200F656C5 /* PrimeBrain.h */,
+				9FC2A4D81CD4F82200F656C5 /* PrimeBrain.m */,
 				9F806A201CD28CBB004966B7 /* ViewController.h */,
 				9F806A211CD28CBB004966B7 /* ViewController.m */,
 				9F806A231CD28CBB004966B7 /* Main.storyboard */,
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC2A4D91CD4F82200F656C5 /* PrimeBrain.m in Sources */,
 				9F806A221CD28CBB004966B7 /* ViewController.m in Sources */,
 				9F806A1F1CD28CBB004966B7 /* AppDelegate.m in Sources */,
 				9F806A1C1CD28CBB004966B7 /* main.m in Sources */,
@@ -303,6 +309,7 @@
 				9F806A301CD28CBB004966B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
