@@ -13,13 +13,11 @@
 @implementation PrimeBrain
 
 
-_number = 5;
-
 
 
 -(BOOL) primeTest
 {
-    //remove all below 2
+    //define all numbers below 2 as not prime
     if(_number<2){
         NSLog(@"Not Prime");
         return NO;}
