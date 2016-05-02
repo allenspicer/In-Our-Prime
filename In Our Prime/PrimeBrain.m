@@ -49,6 +49,7 @@ return YES;
 {
     //create brain instance to apply primetest method for array input
     brainInstance = [[PrimeBrain alloc]init];
+    
    
     //initalize factor variable
     NSUInteger factor = number-1;
@@ -56,10 +57,11 @@ return YES;
     do {
         
         //when variable "factor" is prime and divides evenly into the number...
-        if (([brainInstance primeTest:factor]) && (factor % number == 0))
-            
-                //...add it to the array
-                {[_primeFactorArray addObject:factor];}
+        if (([brainInstance primeTest:factor]) && (number % factor == 0))
+                {
+                    //...add it to the array
+                    [_primeFactorArray addObject:factor.value];
+                }
         
         //increment factor
         factor ++;}
