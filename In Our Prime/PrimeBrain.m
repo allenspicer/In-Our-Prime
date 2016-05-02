@@ -10,7 +10,11 @@
 
 
 
-@implementation PrimeBrain
+@implementation PrimeBrain{
+
+    PrimeBrain *brainInstance;
+    
+}
 
 
 -(BOOL) primeTest:(NSUInteger)number
@@ -44,8 +48,16 @@ return YES;
 
 
 
-//-(NSMutableArray) primeFactorArray {
-//
+//-(NSMutableArray*) primeFactorArray: (NSUInteger)number
+//{
+//    //create brain instance to apply primetest method for array input
+//    brainInstance = [[PrimeBrain alloc]init];
+//    
+//    //
+//    do {
+//        
+//    [brainInstance primeTest:number]
+//    } while (<#condition#>);
 //
 //    
 //}

@@ -17,6 +17,7 @@
 
 
 -(BOOL) primeTest:(NSUInteger)number;
+-(NSMutableArray*) primeFactorArray: (NSUInteger)number;
 
 @end
 
