@@ -31,13 +31,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    
-//    PrimeBrainClass *primeBrainInstance = [[PrimeBrainClass alloc]init];
-//    
-//    // assign delegate
-//    
-//    primeBrainInstance.delegate = self;
-//    [primeBrainInstance primeTestDelegate];
+   // [_textField primeTest]
+    
+    
+
 }
 
 - (void)didReceiveMemoryWarning

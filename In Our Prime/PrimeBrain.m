@@ -12,33 +12,37 @@
 
 @implementation PrimeBrain
 
-number =
+
+_number = 5;
 
 
-//NSUInteger number;
-//NSUInteger cycle = 2;
 
 -(BOOL) primeTest
 {
-    if(self.number<2)
-        return NO;
+    //remove all below 2
+    if(_number<2){
         NSLog(@"Not Prime");
-    for(NSUInteger cycle=2;
-        cycle<self.number;
-        cycle++)
+        return NO;}
+
+    NSUInteger cycle=2;
+    
+    //while loop
+    while (cycle<_number)
     {
-        //A number "number" is divisible by another number "cycle"
-        //if the rest of the division of number divided i equals to zero
-        if(self.number%cycle==0)
-            return NO;
-    NSLog(@"Not Prime");
+            //if there is any perfecly divisible number return no
+            if(_number%cycle==0){
+                NSLog(@"Not Prime");
+                return NO;
+            }
+    //increment
+    cycle++;
     }
-    //If no exist a number between 2 and number-1 that divides number
-    return YES;
-    NSLog(@"Prime!");
-    
-    
+
+//otherwise number has no divisors, return yes
+NSLog(@"Prime!");
+return YES;
 }
+
 
 
 //-(NSMutableArray) primeFactorArray {
@@ -47,43 +51,6 @@ number =
 //    
 //}
 
-
-
-
-//NSUInteger * number = 0;
-//
-//
-//-(BOOL)primeTest(NSUInteger PrimeBrain){
-//
-//    if(1%number == 0
-//
-//
-//       ){
-//       //NSUInteger is prime
-//        return YES;
-//        NSLog(@"Prime");
-//    }else{
-//        //not prime
-//        return NO;
-//        NSLog(@"Not Prime");}
-//}
-
-
-
-
-//-(void)primeTestDelegate
-//{
-//    // send message the message to the delegate
-//    [_delegate primeTest:self];
-//    
-//    
-//}
-//
-//-(void)dealloc
-//{
-//    // set the delegate to nil
-//    _delegate = nil;
-//}
 
 
 
