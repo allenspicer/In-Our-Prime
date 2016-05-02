@@ -12,7 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 
@@ -22,26 +21,28 @@
 
 
 
+
+
+
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
-    PrimeBrainClass *primeBrainInstance = [[PrimeBrainClass alloc]init];
-    
-    // assign delegate
-    
-    primeBrainInstance.delegate = self;
-    [primeBrainInstance primeTestDelegate];
+//    
+//    PrimeBrainClass *primeBrainInstance = [[PrimeBrainClass alloc]init];
+//    
+//    // assign delegate
+//    
+//    primeBrainInstance.delegate = self;
+//    [primeBrainInstance primeTestDelegate];
 }
 
 - (void)didReceiveMemoryWarning
 {[super didReceiveMemoryWarning];}
 
--(void)primeTest:(PrimeBrainClass *)primeBrain
-{
-    NSLog(@"Hello!");
-    
-    
-}
+
 
 @end
