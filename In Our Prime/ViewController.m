@@ -10,7 +10,7 @@
 
 @interface ViewController (){
     
-    //create blueprint for instance of PrimeBrain
+    //view controller class doesn't have any definition of an instance of the brain. create pointer
     PrimeBrain * brainInstance;
 }
 
@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    //create actual instance of primebrain
+    //create instance of primebrain for view controller to use
     brainInstance = [[PrimeBrain alloc]init];
     
     //determine if user input
