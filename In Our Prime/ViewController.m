@@ -8,20 +8,15 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    
+    //create blueprint for instance of PrimeBrain
+    PrimeBrain * brainInstance;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *label;
-@class PrimeBrain: NSObject;
-
-
--(BOOL)primeTest;
-
-
-PrimeBrain * primeTest = primeBrain alloc]init];
-
-
 
 
 @end
@@ -29,23 +24,33 @@ PrimeBrain * primeTest = primeBrain alloc]init];
 @implementation ViewController
 
 
-
-
-
-
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-
-   // [_textField primeTest]
     
+    //create actual instance of primebrain
+    brainInstance = [[PrimeBrain alloc]init];
+    
+    //determine if user input
     if (!(_textField==nil))
-    
-    {if([primeTest textField.text]){
-        _label.text = @"Prime!";
-    }else{ _label.text = @"Not Prime!";
-        
-        
-    }
+
+        {
+        //convert string input from textField into number
+           NSUInteger textFieldNumber = [_textField.text integerValue];
+            
+        //place input from textField in method primeTest
+        if([brainInstance primeTest:textFieldNumber])
+               {
+                   
+                //if yes from primeTest, fill in label with user feedback
+                _label.text = @"Prime!";
+                }else{
+                    
+                //if no from primeTest, fill in label with user feedback
+                _label.text = @"Not Prime!";
+                }
+        }
+}
 
 - (void)didReceiveMemoryWarning
 {[super didReceiveMemoryWarning];}

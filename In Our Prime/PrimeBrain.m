@@ -13,22 +13,23 @@
 @implementation PrimeBrain
 
 
-
-
--(BOOL) primeTest
+-(BOOL) primeTest:(NSUInteger)number
 {
     //define all numbers below 2 as not prime
-    if(_number<2){
+    int intNumber = (int)_number;
+
+    if(intNumber<2){
         NSLog(@"Not Prime");
         return NO;}
 
     NSUInteger cycle=2;
+    int intCycle = (int)_cycle;
     
     //while loop
-    while (cycle<_number)
+    while (cycle<intNumber)
     {
             //if there is any perfecly divisible number return no
-            if(_number%cycle==0){
+            if(intNumber%intCycle==0){
                 NSLog(@"Not Prime");
                 return NO;
             }

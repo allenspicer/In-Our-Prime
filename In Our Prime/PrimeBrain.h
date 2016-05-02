@@ -9,16 +9,14 @@
 #import <Foundation/Foundation.h>
 
 
-
-
 @interface PrimeBrain : NSObject
 
-@property(nonatomic) NSUInteger number;
-@property(nonatomic) NSUInteger cycle;
+@property(nonatomic) NSUInteger *number;
+@property(nonatomic) NSUInteger *cycle;
 @property(strong, nonatomic) NSMutableArray *primeFactorArray;
 
 
--(BOOL)primeTest;
+-(BOOL) primeTest:(NSUInteger)number;
 
 @end
 
