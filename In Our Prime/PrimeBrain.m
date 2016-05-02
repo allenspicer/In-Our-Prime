@@ -20,20 +20,17 @@
 -(BOOL) primeTest:(NSUInteger)number
 {
     //define all numbers below 2 as not prime
-    int intNumber = (int)_number;
-
-    if(intNumber<2){
+    if(number < 2){
         NSLog(@"Not Prime");
         return NO;}
 
-    NSUInteger cycle=2;
-    int intCycle = (int)_cycle;
+    NSUInteger cycle = 2;
     
     //while loop
-    while (cycle<intNumber)
+    while (cycle < number)
     {
             //if there is any perfecly divisible number return no
-            if(intNumber%intCycle==0){
+            if(number % cycle == 0){
                 NSLog(@"Not Prime");
                 return NO;
             }

@@ -17,7 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *label;
--(IBAction)button:(UIButton *)sender;
+
+-(IBAction)checkIfPrime:(id)sender;
 
 
 
@@ -30,29 +31,39 @@
 {
     [super viewDidLoad];
     
+}
+
+-(IBAction)checkIfPrime:(id)sender{
+
     //create instance of primebrain for view controller to use
     brainInstance = [[PrimeBrain alloc]init];
     
     //determine if user input
-    if (!(_textField==nil))
-
-        {
+    if (!([_textField.text isEqualToString:@""]))
+    {
         //convert string input from textField into number
-           NSUInteger textFieldNumber = [_textField.text integerValue];
-            
+        NSUInteger textFieldNumber = [_textField.text integerValue];
+        
         //place input from textField in method primeTest
         if([brainInstance primeTest:textFieldNumber])
-               {
-                   
-                //if yes from primeTest, fill in label with user feedback
-                _label.text = @"Prime!";
-                }else{
-                    
-                //if no from primeTest, fill in label with user feedback
-                _label.text = @"Not Prime!";
-                }
+        {
+            
+            //if yes from primeTest, fill in label with user feedback
+            _label.text = @"Prime!";
+        }else{
+            
+            //if no from primeTest, fill in label with user feedback
+            _label.text = @"Not Prime!";
         }
+    }
+
+
 }
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning
 {[super didReceiveMemoryWarning];}

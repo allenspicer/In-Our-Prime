@@ -12,7 +12,7 @@
 @interface PrimeBrain : NSObject
 
 @property(nonatomic) NSUInteger *number;
-@property(nonatomic) NSUInteger *cycle;
+//@property(nonatomic) NSUInteger *cycle;
 @property(strong, nonatomic) NSMutableArray *primeFactorArray;
 
 
