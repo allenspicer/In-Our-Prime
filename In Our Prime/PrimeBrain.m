@@ -45,21 +45,32 @@ return YES;
 
 
 
-//-(NSMutableArray*) primeFactorArray: (NSUInteger)number
-//{
-//    //create brain instance to apply primetest method for array input
-//    brainInstance = [[PrimeBrain alloc]init];
-//    
-//    //
-//    do {
-//        
-//    [brainInstance primeTest:number]
-//    } while (<#condition#>);
-//
-//    
-//}
+-(NSMutableArray*) primeFactorArray: (NSUInteger)number
+{
+    //create brain instance to apply primetest method for array input
+    brainInstance = [[PrimeBrain alloc]init];
+   
+    //initalize factor variable
+    NSUInteger factor = number-1;
+    
+    do {
+        
+        //when variable "factor" is prime and divides evenly into the number...
+        if (([brainInstance primeTest:factor]) && (factor % number == 0))
+            
+                //...add it to the array
+                {[_primeFactorArray addObject:factor];}
+        
+        //increment factor
+        factor ++;}
+        
+        //until factor reaches zero
+        while (factor > 0);
 
-
+    //return output
+    return _primeFactorArray;
+    
+}
 
 
 @end
