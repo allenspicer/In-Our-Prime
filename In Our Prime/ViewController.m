@@ -35,8 +35,6 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor grayColor];
-    
 }
 
 -(IBAction)checkIfPrime:(id)sender{

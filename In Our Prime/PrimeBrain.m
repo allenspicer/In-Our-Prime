@@ -71,13 +71,8 @@ return YES;
                 {
                     //...add it to the array
                     //[primeFactorArray addObject:[NSNumber factor.value]];
-                    [primeFactorArray addObject:@(factor)];
-                    
+                    [primeFactorArray addObject:[NSNumber numberWithUnsignedInteger:factor]];
                 }
-        
-
-        
-
 
 
     //return output
