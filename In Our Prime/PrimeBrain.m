@@ -19,6 +19,9 @@
 
 -(BOOL) primeTest:(NSUInteger)number
 {
+    //display array
+    NSLog(@"%@", _primeFactorArray);
+    
     //define all numbers below 2 as not prime
     if(number < 2){
         NSLog(@"Not Prime");
@@ -40,6 +43,7 @@
 
 //otherwise number has no divisors, return yes
 NSLog(@"Prime!");
+
 return YES;
 }
 
@@ -49,10 +53,12 @@ return YES;
 {
     //create brain instance to apply primetest method for array input
     brainInstance = [[PrimeBrain alloc]init];
-    
    
     //initalize factor variable
     NSUInteger factor = number-1;
+    
+    //initialize the array
+    NSMutableArray *primeFactorArray = [[NSMutableArray alloc]init];
     
     do {
         
@@ -60,7 +66,8 @@ return YES;
         if (([brainInstance primeTest:factor]) && (number % factor == 0))
                 {
                     //...add it to the array
-                    [_primeFactorArray addObject:factor.value];
+                    //[primeFactorArray addObject:[NSNumber factor.value]];
+                    [primeFactorArray addObject:@(factor)];
                 }
         
         //increment factor

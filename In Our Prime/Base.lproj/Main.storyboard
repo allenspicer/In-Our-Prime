@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,55 +20,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="LowRes2" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-wh-yWl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkW-HP-oaV">
-                                <rect key="frame" x="277" y="177" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="136" y="183" width="103" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Is this Prime?"/>
                                 <connections>
                                     <action selector="checkIfPrime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWP-Sh-5U4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oro-MJ-RIZ">
-                                <rect key="frame" x="279" y="266" width="42" height="21"/>
+                                <rect key="frame" x="136" y="238" width="92" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="XCQ-8L-Gas"/>
+                                    <constraint firstAttribute="height" constant="21" id="qcW-WV-iG7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvy-xf-GBt">
-                                <rect key="frame" x="200" y="80" width="200" height="30"/>
+                                <rect key="frame" x="150" y="80" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="M3o-Hh-EiO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M3o-Hh-EiO"/>
+                                    </mask>
+                                </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIMAL BRAIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSF-jn-N0S">
                                 <rect key="frame" x="169" y="20" width="262" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1b-2j-cjj">
+                                <rect key="frame" x="299" y="183" width="271" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="What Prime Factors Does this have?">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkPrimeFactors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tCb-BF-MYc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltg-0k-3mr">
+                                <rect key="frame" x="288" y="221" width="264" height="228"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="228" id="A5E-s6-AU4"/>
+                                    <constraint firstAttribute="width" constant="264" id="TaG-bW-DhH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="lkW-HP-oaV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="116" id="0H7-tv-kaa"/>
                             <constraint firstItem="oro-MJ-RIZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1hC-az-jRo"/>
                             <constraint firstItem="CSF-jn-N0S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="35B-JH-SK9"/>
+                            <constraint firstItem="TEm-wh-yWl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:1" id="5gs-Ol-0rO"/>
                             <constraint firstItem="wvy-xf-GBt" firstAttribute="top" secondItem="CSF-jn-N0S" secondAttribute="bottom" constant="12" id="6Nj-o7-mIu"/>
+                            <constraint firstItem="ltg-0k-3mr" firstAttribute="leading" secondItem="oro-MJ-RIZ" secondAttribute="trailing" constant="60" id="6PF-hW-Vyw"/>
+                            <constraint firstItem="TEm-wh-yWl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="7QE-kG-x5V"/>
+                            <constraint firstItem="oro-MJ-RIZ" firstAttribute="top" secondItem="lkW-HP-oaV" secondAttribute="bottom" constant="25" id="AoZ-Pj-zDV"/>
                             <constraint firstItem="wvy-xf-GBt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="BEc-y0-s8j"/>
-                            <constraint firstItem="oro-MJ-RIZ" firstAttribute="top" secondItem="lkW-HP-oaV" secondAttribute="bottom" constant="59" id="D3T-jp-dZX"/>
+                            <constraint firstItem="oro-MJ-RIZ" firstAttribute="top" secondItem="lkW-HP-oaV" secondAttribute="bottom" constant="49" id="D3T-jp-dZX"/>
                             <constraint firstItem="lkW-HP-oaV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DhU-5m-I94"/>
                             <constraint firstItem="lkW-HP-oaV" firstAttribute="top" secondItem="wvy-xf-GBt" secondAttribute="bottom" constant="67" id="Iij-Vz-nUh"/>
+                            <constraint firstItem="lkW-HP-oaV" firstAttribute="top" secondItem="wvy-xf-GBt" secondAttribute="bottom" constant="73" id="LQK-Ae-ZlS"/>
+                            <constraint firstItem="oro-MJ-RIZ" firstAttribute="leading" secondItem="lkW-HP-oaV" secondAttribute="leading" id="TCJ-Ne-bFL"/>
+                            <constraint firstItem="TEm-wh-yWl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Tra-xS-BVh"/>
+                            <constraint firstItem="W1b-2j-cjj" firstAttribute="top" secondItem="wvy-xf-GBt" secondAttribute="bottom" constant="73" id="Xrp-nG-J9B"/>
+                            <constraint firstItem="wvy-xf-GBt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ZaD-AK-bMb"/>
                             <constraint firstItem="CSF-jn-N0S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eLN-J3-ofF"/>
                             <constraint firstItem="wvy-xf-GBt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sjd-LL-27i"/>
+                            <constraint firstItem="W1b-2j-cjj" firstAttribute="leading" secondItem="lkW-HP-oaV" secondAttribute="trailing" constant="60" id="udg-T2-aKI"/>
+                            <constraint firstItem="ltg-0k-3mr" firstAttribute="top" secondItem="W1b-2j-cjj" secondAttribute="bottom" constant="8" id="xdc-71-uX6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="5gs-Ol-0rO"/>
                                 <exclude reference="BEc-y0-s8j"/>
+                                <exclude reference="DhU-5m-I94"/>
+                                <exclude reference="Iij-Vz-nUh"/>
+                                <exclude reference="1hC-az-jRo"/>
+                                <exclude reference="D3T-jp-dZX"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="button" destination="lkW-HP-oaV" id="8pH-JW-H28"/>
                         <outlet property="label" destination="oro-MJ-RIZ" id="Gjv-0v-MHD"/>
+                        <outlet property="secondButton" destination="W1b-2j-cjj" id="Ss1-FY-Vrl"/>
+                        <outlet property="secondLabel" destination="ltg-0k-3mr" id="ESc-gv-ZPj"/>
                         <outlet property="textField" destination="wvy-xf-GBt" id="s7V-id-dcX"/>
                     </connections>
                 </viewController>
@@ -74,4 +129,7 @@
             <point key="canvasLocation" x="288" y="301"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LowRes2" width="350" height="200"/>
+    </resources>
 </document>

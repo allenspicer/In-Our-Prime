@@ -18,6 +18,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *secondButton;
+@property (weak, nonatomic) IBOutlet UILabel *secondLabel;
+
 -(IBAction)checkIfPrime:(id)sender;
 
 
@@ -30,6 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor grayColor];
     
 }
 
@@ -58,6 +64,34 @@
     }
 
 
+}
+
+
+-(IBAction)checkPrimeFactors:(id)sender{
+    
+    //create instance of primebrain for view controller to use
+    brainInstance = [[PrimeBrain alloc]init];
+    
+    //determine if user input
+    if (!([_textField.text isEqualToString:@""]))
+    {
+        //convert string input from textField into number
+        NSUInteger textFieldNumber = [_textField.text integerValue];
+        
+        //place input from textField in method primeTest
+        if([brainInstance primeTest:textFieldNumber])
+        {
+            
+            //if yes from primeTest, fill in label with user feedback
+            _secondLabel.text = @"Prime!";
+        }else{
+            
+            //if no from primeTest, fill in label with user feedback
+            _secondLabel.text = @"Not Prime!";
+        }
+    }
+    
+    
 }
 
 
