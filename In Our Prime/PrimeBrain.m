@@ -59,24 +59,24 @@ return YES;
     NSMutableArray *primeFactorArray = [[NSMutableArray alloc]init];
     
     //for all factors from number to zero
-    while ((number % factor == 0)&&(factor > 0)) {
+    while (factor > 0){
         
         //decrement factor
-        factor --;}
+        factor --;
         
         //when variable "factor" is prime...
-        if ([brainInstance primeTest:factor])
+        if (([brainInstance primeTest:factor])&&(number % factor == 0))
                 {
                     //...add it to the array
                     //[primeFactorArray addObject:[NSNumber factor.value]];
                     [primeFactorArray addObject:[NSNumber numberWithUnsignedInteger:factor]];
                 }
-
+    }
 
     //return output
     return _primeFactorArray;
     
+    
 }
-
 
 @end

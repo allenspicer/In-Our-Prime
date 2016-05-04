@@ -75,14 +75,14 @@
     //insert local variable into prime factor array test - output is an array
     //change array into string
     
+    _secondLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)textFieldNumber];
     
     
     
     
+    NSLog(@"%@", [brainInstance primeFactorTest:textFieldNumber]);
     
-    NSArray *testArray = [brainInstance primeFactorTest:textFieldNumber];
-    
-    NSLog(@"%@", testArray);
+
     
   // NSString * primeFactorString = [[[brainInstance primeFactorArray:textFieldNumber]valueForKey:@"description"]componentsJoinedByString:@" "];
     //NSString * primeFactorString = [brainInstance primeFactorArray:textFieldNumber];
