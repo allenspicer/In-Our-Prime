@@ -19,8 +19,6 @@
 
 -(BOOL) primeTest:(NSUInteger)number
 {
-    //display array
-    NSLog(@"%@", _primeFactorArray);
     
     //define all numbers below 2 as not prime
     if(number < 2){
@@ -49,7 +47,7 @@ return YES;
 
 
 
--(NSMutableArray*) primeFactorArray: (NSUInteger)number
+-(NSMutableArray*) primeFactorTest: (NSUInteger)number
 {
     //create brain instance to apply primetest method for array input
     brainInstance = [[PrimeBrain alloc]init];

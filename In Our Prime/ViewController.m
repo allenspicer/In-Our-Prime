@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
-
 @property (weak, nonatomic) IBOutlet UIButton *secondButton;
 @property (weak, nonatomic) IBOutlet UILabel *secondLabel;
 
@@ -76,9 +75,19 @@
     //insert local variable into prime factor array test - output is an array
     //change array into string
     
-    NSString * primeFactorString = [[[brainInstance primeFactorArray:textFieldNumber] valueForKey:@"description"] componentsJoinedByString:@""];
     
-    _secondLabel.text = @"%@",primeFactorString;
+    
+    
+    
+    
+    NSArray *testArray = [brainInstance primeFactorTest:textFieldNumber];
+    
+    NSLog(@"%@", testArray);
+    
+  // NSString * primeFactorString = [[[brainInstance primeFactorArray:textFieldNumber]valueForKey:@"description"]componentsJoinedByString:@" "];
+    //NSString * primeFactorString = [brainInstance primeFactorArray:textFieldNumber];
+    
+   // _secondLabel.text = @"%@",primeFactorString;
     
     
 }
