@@ -22,7 +22,6 @@
     
     //define all numbers below 2 as not prime
     if(number < 2){
-        NSLog(@"Not Prime");
         return NO;}
 
     NSUInteger cycle = 2;
@@ -32,7 +31,6 @@
     {
             //if there is any perfecly divisible number return no
             if(number % cycle == 0){
-                NSLog(@"Not Prime");
                 return NO;
             }
     //increment
@@ -40,7 +38,6 @@
     }
 
 //otherwise number has no divisors, return yes
-NSLog(@"Prime!");
 
 return YES;
 }

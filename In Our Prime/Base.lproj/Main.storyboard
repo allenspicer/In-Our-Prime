@@ -20,19 +20,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="LowRes2" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-wh-yWl">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LowRes2" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-wh-yWl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkW-HP-oaV">
-                                <rect key="frame" x="136" y="183" width="103" height="30"/>
+                                <rect key="frame" x="247" y="160" width="106" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                <state key="normal" title="Is this Prime?"/>
+                                <state key="normal" title="Is This Prime?"/>
                                 <connections>
                                     <action selector="checkIfPrime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWP-Sh-5U4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oro-MJ-RIZ">
-                                <rect key="frame" x="136" y="238" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oro-MJ-RIZ">
+                                <rect key="frame" x="254" y="215" width="92" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="92" id="XCQ-8L-Gas"/>
                                     <constraint firstAttribute="height" constant="21" id="qcW-WV-iG7"/>
@@ -41,7 +41,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvy-xf-GBt">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Feed Me A Number!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvy-xf-GBt">
                                 <rect key="frame" x="150" y="80" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="M3o-Hh-EiO"/>
@@ -61,29 +61,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1b-2j-cjj">
-                                <rect key="frame" x="299" y="183" width="271" height="30"/>
+                                <rect key="frame" x="163" y="261" width="274" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                <state key="normal" title="What Prime Factors Does this have?">
+                                <state key="normal" title="What Prime Factors Does This have?">
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="checkPrimeFactors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tCb-BF-MYc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltg-0k-3mr">
-                                <rect key="frame" x="288" y="221" width="264" height="228"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltg-0k-3mr">
+                                <rect key="frame" x="165" y="316" width="271" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="228" id="A5E-s6-AU4"/>
+                                    <constraint firstAttribute="height" constant="131" id="Ncz-pA-Pdf"/>
                                     <constraint firstAttribute="width" constant="264" id="TaG-bW-DhH"/>
+                                    <constraint firstAttribute="width" constant="271" id="qKj-5k-hCw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="A5E-s6-AU4"/>
+                                        <exclude reference="TaG-bW-DhH"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="lkW-HP-oaV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="116" id="0H7-tv-kaa"/>
+                            <constraint firstItem="lkW-HP-oaV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" priority="250" constant="116" id="0H7-tv-kaa"/>
                             <constraint firstItem="oro-MJ-RIZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1hC-az-jRo"/>
                             <constraint firstItem="CSF-jn-N0S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="35B-JH-SK9"/>
                             <constraint firstItem="TEm-wh-yWl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:1" id="5gs-Ol-0rO"/>
@@ -94,25 +102,51 @@
                             <constraint firstItem="wvy-xf-GBt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="BEc-y0-s8j"/>
                             <constraint firstItem="oro-MJ-RIZ" firstAttribute="top" secondItem="lkW-HP-oaV" secondAttribute="bottom" constant="49" id="D3T-jp-dZX"/>
                             <constraint firstItem="lkW-HP-oaV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DhU-5m-I94"/>
+                            <constraint firstItem="oro-MJ-RIZ" firstAttribute="width" secondItem="TEm-wh-yWl" secondAttribute="width" id="E4S-Uz-Uqd"/>
+                            <constraint firstItem="W1b-2j-cjj" firstAttribute="top" secondItem="oro-MJ-RIZ" secondAttribute="bottom" priority="750" constant="25" id="GQO-WQ-Vha"/>
+                            <constraint firstItem="oro-MJ-RIZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="INJ-Al-fZC"/>
+                            <constraint firstItem="lkW-HP-oaV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="INh-RM-f5w"/>
                             <constraint firstItem="lkW-HP-oaV" firstAttribute="top" secondItem="wvy-xf-GBt" secondAttribute="bottom" constant="67" id="Iij-Vz-nUh"/>
+                            <constraint firstItem="TEm-wh-yWl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="KcM-e5-WB1"/>
                             <constraint firstItem="lkW-HP-oaV" firstAttribute="top" secondItem="wvy-xf-GBt" secondAttribute="bottom" constant="73" id="LQK-Ae-ZlS"/>
+                            <constraint firstItem="oro-MJ-RIZ" firstAttribute="top" secondItem="lkW-HP-oaV" secondAttribute="bottom" constant="25" id="M2J-GO-fob"/>
+                            <constraint firstItem="lkW-HP-oaV" firstAttribute="top" secondItem="wvy-xf-GBt" secondAttribute="bottom" priority="750" constant="50" id="NaI-AO-RY7"/>
+                            <constraint firstItem="lkW-HP-oaV" firstAttribute="centerX" secondItem="TEm-wh-yWl" secondAttribute="centerX" id="Nrv-oE-73p"/>
                             <constraint firstItem="oro-MJ-RIZ" firstAttribute="leading" secondItem="lkW-HP-oaV" secondAttribute="leading" id="TCJ-Ne-bFL"/>
                             <constraint firstItem="TEm-wh-yWl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Tra-xS-BVh"/>
                             <constraint firstItem="W1b-2j-cjj" firstAttribute="top" secondItem="wvy-xf-GBt" secondAttribute="bottom" constant="73" id="Xrp-nG-J9B"/>
+                            <constraint firstItem="lkW-HP-oaV" firstAttribute="top" secondItem="wvy-xf-GBt" secondAttribute="bottom" constant="73" id="Y1P-1S-9C7"/>
                             <constraint firstItem="wvy-xf-GBt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ZaD-AK-bMb"/>
+                            <constraint firstItem="W1b-2j-cjj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blg-26-KPR"/>
+                            <constraint firstItem="ltg-0k-3mr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c7J-Hc-RjH"/>
                             <constraint firstItem="CSF-jn-N0S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eLN-J3-ofF"/>
+                            <constraint firstItem="TEm-wh-yWl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="hgh-Tp-SkB"/>
+                            <constraint firstItem="W1b-2j-cjj" firstAttribute="centerX" secondItem="TEm-wh-yWl" secondAttribute="centerX" id="i2x-gr-xXt"/>
                             <constraint firstItem="wvy-xf-GBt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sjd-LL-27i"/>
-                            <constraint firstItem="W1b-2j-cjj" firstAttribute="leading" secondItem="lkW-HP-oaV" secondAttribute="trailing" constant="60" id="udg-T2-aKI"/>
+                            <constraint firstItem="W1b-2j-cjj" firstAttribute="leading" secondItem="lkW-HP-oaV" secondAttribute="trailing" priority="250" constant="60" id="udg-T2-aKI"/>
+                            <constraint firstItem="ltg-0k-3mr" firstAttribute="top" secondItem="W1b-2j-cjj" secondAttribute="bottom" constant="25" id="vQb-lh-Wa2"/>
                             <constraint firstItem="ltg-0k-3mr" firstAttribute="top" secondItem="W1b-2j-cjj" secondAttribute="bottom" constant="8" id="xdc-71-uX6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5gs-Ol-0rO"/>
                                 <exclude reference="BEc-y0-s8j"/>
+                                <exclude reference="0H7-tv-kaa"/>
                                 <exclude reference="DhU-5m-I94"/>
                                 <exclude reference="Iij-Vz-nUh"/>
+                                <exclude reference="LQK-Ae-ZlS"/>
+                                <exclude reference="Nrv-oE-73p"/>
+                                <exclude reference="Y1P-1S-9C7"/>
                                 <exclude reference="1hC-az-jRo"/>
+                                <exclude reference="AoZ-Pj-zDV"/>
                                 <exclude reference="D3T-jp-dZX"/>
+                                <exclude reference="E4S-Uz-Uqd"/>
+                                <exclude reference="TCJ-Ne-bFL"/>
+                                <exclude reference="Xrp-nG-J9B"/>
+                                <exclude reference="i2x-gr-xXt"/>
+                                <exclude reference="udg-T2-aKI"/>
+                                <exclude reference="6PF-hW-Vyw"/>
+                                <exclude reference="xdc-71-uX6"/>
                             </mask>
                         </variation>
                     </view>

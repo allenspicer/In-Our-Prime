@@ -52,11 +52,11 @@
         {
             
             //if yes from primeTest, fill in label with user feedback
-            _label.text = @"Prime!";
+            _label.text = @"Yes!";
         }else{
             
             //if no from primeTest, fill in label with user feedback
-            _label.text = @"Not Prime!";
+            _label.text = @"Nope!";
         }
     }
 
@@ -66,36 +66,40 @@
 
 -(IBAction)checkPrimeFactors:(id)sender{
     
-    //create instance of primebrain for view controller to use
-    brainInstance = [[PrimeBrain alloc]init];
+        brainInstance = [[PrimeBrain alloc]init];
     
-    //remove value from text field and place into local variable
     NSUInteger textFieldNumber = [_textField.text integerValue];
+    NSUInteger factor = textFieldNumber;
+    NSMutableArray * mutableFactorArray = [[NSMutableArray alloc]init];
     
-    //insert local variable into prime factor array test - output is an array
-    //change array into string
+    ///create while loop
+    while (factor>1){
+        factor --;
+        
+    //cycle through all factors of textfieldnumber and send them to prime test as before
+        if (textFieldNumber % factor == 0){
+        
+    //while in loop, if they are prime addobject to array
+            if([brainInstance primeTest:factor]){
+                
+            //take number and make it into an object while adding object to array
+                [mutableFactorArray addObject:@(factor)];
+            }
+        }
     
-    _secondLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)textFieldNumber];
+        //create string from array
+        NSString *labelString = [[mutableFactorArray valueForKey:@"description"] componentsJoinedByString:@" & "];
+        
+        
+        //display string in label
+       _secondLabel.text = labelString;
     
+    }
     
-    
-    
-    NSLog(@"%@", [brainInstance primeFactorTest:textFieldNumber]);
-    
-
-    
-  // NSString * primeFactorString = [[[brainInstance primeFactorArray:textFieldNumber]valueForKey:@"description"]componentsJoinedByString:@" "];
-    //NSString * primeFactorString = [brainInstance primeFactorArray:textFieldNumber];
-    
-   // _secondLabel.text = @"%@",primeFactorString;
-    
-    
+    if (([_secondLabel.text  isEqual: @""])){
+               _secondLabel.text = @"No Prime Factors.";
+    }
 }
-
-
-
-
-
 
 - (void)didReceiveMemoryWarning
 {[super didReceiveMemoryWarning];}
